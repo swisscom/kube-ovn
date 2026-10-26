@@ -1005,6 +1005,12 @@ controller:
       memory: "1Gi"
       ephemeral-storage: 1Gi
 
+  # -- Tolerations configuratino for kube-ovn-controller.
+  # -- More information on how to set tolerations can be found at https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
+  tolerations: []
+  # - key: node-role.kubernetes.io/control-plane
+  #   effect: NoSchedule
+  
   # -- Node affinity configuration for kube-ovn-controller.
   # -- More information on formatting nodeAffinity can be found at https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity
   # @section -- Kube-OVN controller configuration
